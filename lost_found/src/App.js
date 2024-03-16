@@ -6,6 +6,12 @@ import Footer from './components/footer';
 import KeyFeaturesSection from './components/features';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import FoundItemForm from './components/detail-form';
+import Myhome from './components/home';
+import LostItemForm from './components/lost-details';
+import ItemDisplay from './components/Card';
+
+
+
 
 function App() {
   return (
@@ -13,11 +19,14 @@ function App() {
     <div className="App">
       
         <Mynavbar />
-        <Searchbar />
-        <KeyFeaturesSection />
+        
         <Routes>
           {/* Define routes here */}
+          <Route path='/' element={<Myhome />} />
           <Route path="/found" element={<FoundItemForm />} />
+          <Route path="/lost" element={<LostItemForm />} />
+          <Route path="/item-list" element={<ItemDisplay />} />
+         
         </Routes>
         <Footer />
       

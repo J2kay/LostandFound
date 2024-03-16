@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 
-function FoundItemForm() {
+function LostItemForm() {
   const [formData, setFormData] = useState({
     itemName: '',
     description: '',
@@ -27,7 +27,7 @@ function FoundItemForm() {
       <div  className='form-div'>
         
         <form onSubmit={handleSubmit} className="form-container">
-        <h4>Item Details Form</h4>
+        <h4>Lost Item Form</h4>
           <label>
             Item Name:
             <input type="text" name="itemName" value={formData.itemName} onChange={handleChange} />
@@ -47,4 +47,4 @@ function FoundItemForm() {
   );
 }
 
-export default FoundItemForm;
+export default LostItemForm;
